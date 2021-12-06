@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ZZBase.Bonus;
+using UnityEngine.SceneManagement;
 
 namespace ZZBase.Maze
 {
@@ -9,9 +11,18 @@ namespace ZZBase.Maze
         internal static World world;
         internal static Maze maze;
         internal static GameObject player;
+        internal static Player player_script;
         internal static bool mainController;
         internal static GameObject messageInformer_go;
+        internal static BonusSpawner bonusSpawner;
 
+        internal static void CheckVictory()
+        {
+            if (player_script.GetScore() >= Settings.max_score)
+            {
+                SceneManager.LoadScene(1);
+            }
+        }
         internal static void SetMessageInfo(string text)
         {
             if (messageInformer_go == null)
@@ -51,6 +62,12 @@ namespace ZZBase.Maze
             maze.Generate();
             maze.Show();
             InstantiatePlayer();
+
+            //ScoreInfo
+            GameObject.Instantiate(world.prefabs[5], Vector3.zero, Quaternion.identity);
+
+            //BonusSpawner
+            GameObject.Instantiate(world.prefabs[6], Vector3.zero, Quaternion.identity);
         }
 
         internal static bool IsEven(int value)

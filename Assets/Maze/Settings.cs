@@ -11,6 +11,7 @@ namespace ZZBase.Maze
         internal static readonly float cell_width = 3;
         internal static readonly float cell_height = 3;
         internal static readonly float wall_thickness = 0.2f;
+        internal static readonly int max_score = 100;
     }
 }
 

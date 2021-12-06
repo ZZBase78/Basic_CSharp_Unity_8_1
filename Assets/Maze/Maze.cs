@@ -125,7 +125,7 @@ namespace ZZBase.Maze
 
                 }
             }
-            Debug.Log("Generate comlete");
+            //Debug.Log("Generate comlete");
         }
 
         internal void ShowMazeCenterAndZero()
@@ -156,7 +156,7 @@ namespace ZZBase.Maze
                     map[x, y].Show();
                 }
             }
-            Debug.Log("Show comlete");
+            //Debug.Log("Show comlete");
         }
     }
 

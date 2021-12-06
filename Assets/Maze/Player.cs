@@ -9,12 +9,25 @@ namespace ZZBase.Maze
         private Rigidbody rb;
         private float speed;
         private bool changeMainController;
+        private int score;
+
+        internal void AddScore(int value)
+        {
+            score += value;
+            Global.CheckVictory();
+        }
+        internal int GetScore()
+        {
+            return score;
+        }
 
         private void Awake()
         {
             Global.player = gameObject;
+            Global.player_script = this;
             rb = GetComponent<Rigidbody>();
             speed = 5f;
+            score = 0;
         }
 
         void Move()
