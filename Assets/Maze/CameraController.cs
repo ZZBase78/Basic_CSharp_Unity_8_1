@@ -16,7 +16,16 @@ namespace ZZBase.Maze
         {
             if (Global.player != null)
             {
-                transform.position = Global.player.transform.position + offset;
+                Vector3 targetPosition;
+                if (Global.CameraBonusTime > 0)
+                {
+                    targetPosition = Global.player.transform.position + offset * 2f;
+                }
+                else
+                {
+                    targetPosition = Global.player.transform.position + offset;
+                }
+                transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime);
             }
         }
     }

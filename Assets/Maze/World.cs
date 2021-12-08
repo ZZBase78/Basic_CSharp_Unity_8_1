@@ -25,6 +25,11 @@ namespace ZZBase.Maze
         {
             Global.SetCursorVisible(true);
         }
+
+        private void Update()
+        {
+            Global.Update();
+        }
     }
 
 }

@@ -15,6 +15,12 @@ namespace ZZBase.Maze
         internal static bool mainController;
         internal static GameObject messageInformer_go;
         internal static BonusSpawner bonusSpawner;
+        internal static float CameraBonusTime;
+
+        internal static void AddCameraBonusTime(float value)
+        {
+            CameraBonusTime += value;
+        }
 
         internal static void CheckVictory()
         {
@@ -34,7 +40,13 @@ namespace ZZBase.Maze
         }
         internal static void Awake()
         {
+            CameraBonusTime = 0f;
             ChangeMainController(true);
+        }
+
+        internal static void Update()
+        {
+            if (CameraBonusTime > 0) CameraBonusTime -= Time.deltaTime;
         }
 
         internal static void ChangeMainController(bool value)

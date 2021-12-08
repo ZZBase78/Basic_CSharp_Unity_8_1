@@ -19,5 +19,10 @@ namespace ZZBase.Bonus
         {
             Global.player_script.AddScore(bonusScore);
         }
+
+        public override bool IsGoodBonus()
+        {
+            return true;
+        }
     }
 }

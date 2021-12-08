@@ -45,3 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bonusPrefabs:
   - {fileID: 3746340674026077321, guid: f2b5b2a4591c7734d942fe92d9543488, type: 3}
+  - {fileID: 466311320102667205, guid: 524ae6509da13544eaa7921cf45c1d59, type: 3}
+  - {fileID: 6261348040707953538, guid: e61b5641a79a1aa4d824ba2d04443bc4, type: 3}
+  - {fileID: 4244875429391810259, guid: 81cf06d41e7466c4bb8b0218506716a4, type: 3}
+  - {fileID: 4520431785569369764, guid: dae11d276b334eb4eba2062b84edde6f, type: 3}
